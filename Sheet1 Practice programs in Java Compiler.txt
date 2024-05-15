@@ -1,0 +1,342 @@
+Sheet Practice programs in Java Compiler
+
+1.Factorial
+2.Leap year
+3.FibonnaciSeries
+4.SwappingNumberwithThirdVariable
+5.Prime Number
+6.ReverseArray
+7.Fibonnaci Series
+8.RemoveSpecialCharacter
+9.Anagram
+10.StarPattern
+11.SumofTwoArrays
+12.DuplicateElementInArray
+13.CountCharateroccuranceinWordCount
+
+
+
+
+
+
+
+
+1.Factorial: success
+class Factorial {
+    public static void main(String[] args) {
+        
+        int n = 4,fact=1;
+        
+        for(int i=1;i<=n;i++){
+            
+            fact=fact*i;
+            
+        }
+        
+        System.out.println("Fact of 4 ="+fact);
+    }
+}
+
+Fact of 4 =24
+
+=== Code Execution Successful ===
+
+=======================================================================
+
+2.Leap year
+class LeapYear {
+    public static void main(String[] args) {
+        
+        int year = 2024;
+        
+        if ((year%4==0)&&(year%100!=0)||(year%400==0)){
+            
+            System.out.println("leap year");
+            
+        }
+        else{
+            System.out.println(" not aleap year");
+        }
+        
+    }
+}
+
+leap year
+
+=== Code Execution Successful ===
+
+===========================================================================
+3.FibonnaciSeries
+
+class FibonnaciSeries {
+    public static void main(String[] args) {
+       
+       int n =5;
+       int a=0;
+       int b=1;
+       int c=0;
+       
+       while(c<=n){
+           a=b;
+           b=c;
+           c=a+b;
+           System.out.println(c);
+       }
+        
+        
+    }
+}
+
+1
+1
+2
+3
+5
+8
+
+=== Code Execution Successful ===
+=====================================================================================================
+
+4.SwappingNumberwithThirdVariable
+
+class SwappingNumberwithThirdVariable {
+    public static void main(String[] args) {
+       
+      int a=10,b=20,temp;
+      
+      System.out.println("Before swaping"+a+" "+b);
+      
+         temp=a;// 10
+         a=b;//20 =20
+         b=temp;//10 =10
+         System.out.println("After swaping"+a+" "+b);
+          
+    }
+}
+
+Before swaping10 20
+After swaping20 10
+
+=== Code Execution Successful ===
+
+============================================================================
+5.PrimeNumber
+
+class PrimeNumber {
+    public static void main(String[] args) {
+        
+        int n = 7,temp=0;
+//2,3,4,5,6
+        for(int i=2;i<=n-1;i++){
+            
+            if(n%i==0){
+                temp=temp+1;
+            }
+            
+        }
+        if(temp>0){
+            System.out.println("Not a prime number");
+        }
+        System.out.println("is a prime number");
+    }
+}
+
+is a prime number
+
+=== Code Execution Successful ===
+
+=====================================================================================================
+
+6.ReverseArray
+
+import java.util.Arrays;//import java util Array class
+class ReverseArray {
+    
+    public static void main(String[] args) {
+        int arr[] = {1,2,3,4,5,6,7};
+        int i=0,j=arr.length-1,temp;
+        
+        while(i<j){
+            
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+        System.out.println(Arrays.toString(arr));
+        
+        
+        
+    }
+}
+
+[7, 6, 5, 4, 3, 2, 1]
+
+=== Code Execution Successful ===
+
+===============================================================================================
+
+7.FibonnaciSeries
+class FibonnaciSeries {
+    
+    public static void main(String[] args) {
+      
+      int n=5;
+      int a=0;
+      int b=1;
+      int c=0;
+      
+      while(c<n){
+          
+          a=b;
+          b=c;
+          c=a+b;
+          
+          System.out.println(c);
+          
+      }
+        
+    }
+}
+
+1
+1
+2
+3
+5
+
+=== Code Execution Successful ===
+==========================================================================================
+8.RemoveSpecialCharacter
+
+class RemoveSpecialCharacter {
+    
+    public static void main(String[] args) {
+      
+      String str = "ja#va Pro!gr$ammi+ng";
+      
+           String   plainstr=str.replaceAll("[^a-zA-Z0-9]","");
+           System.out.println(plainstr);
+    }
+}
+
+javaProgramming
+
+=== Code Execution Successful ===
+===================================================================================================
+
+9.Anagram
+import java.util.Arrays;
+
+class Anagram {
+    
+    public static void main(String[] args) {
+      
+      String S1="race";
+      String S2="care";
+              
+         char  [] arr1     = S1.toCharArray();
+        char    []  arr2        =S2.toCharArray();
+        
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        
+        System.out.println(Arrays.equals(arr1,arr2));
+    }
+}
+
+true
+
+=== Code Execution Successful ===
+============================================================================
+
+10.StarPattern
+
+class StarPattern {
+    
+    public static void main(String[] args) {
+      
+      int n = 4;
+      
+      for(int i=1;i<=n;i++){
+          for(int j=1;j<=i;j++){
+              
+              System.out.print("*");
+              
+          }
+           System.out.println("");
+      }
+    }
+}
+
+*
+**
+***
+****
+
+=== Code Execution Successful ===	
+
+==================================================================================================
+
+11.SumofTwoArrays
+
+class SumofTwoArrays {
+    public static void main(String[] args) {
+        int sum1=0;
+        int sum2=0;
+        int arr1[]={1,2,3,4,5};
+        int arr2[]={6,7,8,9,10};
+        
+        for(int i:arr1){
+            sum1=i+sum1;
+            
+        }
+        for(int j :arr2){
+            sum2=j+sum2;
+        }
+        
+        System.out.println(sum1+sum2);
+    }
+}
+
+55
+
+=== Code Execution Successful ===
+=======================================================================================
+12.DuplicateElementInArray
+class DuplicateElementInArray {
+    public static void main(String[] args) {
+        
+        int arr[]={1,2,4,6,7,6,5,9};
+        
+        for(int i=0;i<arr.length-1;i++){
+            for(int j =i+1;j<arr.length;j++){
+               if(arr[i]==arr[j]){
+                    System.out.println("Duplicate value is "+arr[j]);
+                }
+                
+            }
+            
+        }
+       
+    }
+}
+
+Duplicate value is 6
+
+=== Code Execution Successful ===
+==============================================================================================
+
+13.CountCharateroccuranceinWordCount
+
+class CountCharateroccuranceinWordCount {
+    public static void main(String[] args) {
+        
+        String S ="Java Programming";
+              int TotalCount=S.length();
+             int TotalCountWithout_a =S.replace("a","").length();
+             int count = TotalCount -TotalCountWithout_a;
+       System.out.println("Number of occurance is "+count);
+    }
+}
